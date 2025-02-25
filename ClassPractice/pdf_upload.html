@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Upload</title>
+</head>
+<body>
+
+    <form id="uploadForm">
+        <label for="pdfFile">Upload PDF (Max: 200MB):</label>
+        <input type="file" id="pdfFile" accept="application/pdf" required>
+        <button type="submit">Upload</button>
+        <p id="message"></p>
+    </form>
+
+    <script>
+        document.getElementById("uploadForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let fileInput = document.getElementById("pdfFile");
+            let file = fileInput.files[0];
+            let message = document.getElementById("message");
+
+            if (!file) {
+                message.textContent = "Please select a file.";
+                return;
+            }
+
+            if (file.type !== "application/pdf") {
+                message.textContent = "Only PDF files are allowed.";
+                return;
+            }
+
+            if (file.size > 15 * 1024 * 1024) { // 200MB in bytes
+                message.textContent = "File size exceeds 200MB.";
+                return;
+            }
+
+            message.textContent = "File is valid. Ready to upload!";
+            // You can proceed with uploading the file here
+        });
+    </script>
+
+</body>
+</html>

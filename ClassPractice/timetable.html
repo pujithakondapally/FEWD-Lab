@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timetable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .timetable-container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            border: 3px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+        .timetable-item {
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .break, .lunch {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            font-weight: bold;
+        }
+        .faculty-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 2fr;
+            border: 3px solid black;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Room No:- 408</h2>
+        
+        <div class="timetable-container">
+            <div class="timetable-item">DAY/TIME</div>
+            <div class="timetable-item">9:30 - 10:20</div>
+            <div class="timetable-item">10:20 - 11:10</div>
+            <div class="timetable-item">11:10 - 11:25</div>
+            <div class="timetable-item">11:25 - 12:15</div>
+            <div class="timetable-item">12:15 - 1:05</div>
+            <div class="timetable-item">1:05 - 2:00</div>
+            <div class="timetable-item">2:00 - 2:50</div>
+            <div class="timetable-item">2:50 - 3:40</div>
+            <div class="timetable-item">3:40 - 4:30</div>
+            
+            <div class="timetable-item">MON</div>
+            <div class="timetable-item">CC LAB</div>
+            <div class="timetable-item">CC LAB</div>
+            <div class="timetable-item break">BREAK</div>
+            <div class="timetable-item">CC LAB</div>
+            <div class="timetable-item">NN</div>
+            <div class="timetable-item lunch">LUNCH</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            
+            <div class="timetable-item">TUE</div>
+            <div class="timetable-item">FEWD LAB</div>
+            <div class="timetable-item">FEWD LAB</div>
+            <div class="timetable-item break">BREAK</div>
+            <div class="timetable-item">FEWD LAB</div>
+            <div class="timetable-item">IOT</div>
+            <div class="timetable-item lunch">LUNCH</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            
+            <div class="timetable-item">WED</div>
+            <div class="timetable-item">CC</div>
+            <div class="timetable-item">CC</div>
+            <div class="timetable-item break">BREAK</div>
+            <div class="timetable-item">IOT</div>
+            <div class="timetable-item">FEWD</div>
+            <div class="timetable-item lunch">LUNCH</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            
+            <div class="timetable-item">THU</div>
+            <div class="timetable-item">FEWD</div>
+            <div class="timetable-item">FEWD</div>
+            <div class="timetable-item break">BREAK</div>
+            <div class="timetable-item">NN</div>
+            <div class="timetable-item">CC</div>
+            <div class="timetable-item lunch">LUNCH</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            
+            <div class="timetable-item">FRI</div>
+            <div class="timetable-item">IOT</div>
+            <div class="timetable-item">CC</div>
+            <div class="timetable-item break">BREAK</div>
+            <div class="timetable-item">FEWD</div>
+            <div class="timetable-item">NN</div>
+            <div class="timetable-item lunch">LUNCH</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            <div class="timetable-item">FS</div>
+            
+            <div class="timetable-item">SAT</div>
+            <div class="timetable-item">IOT</div>
+            <div class="timetable-item">FEWD</div>
+            <div class="timetable-item break">BREAK</div>
+            <div class="timetable-item">MENTORING</div>
+            <div class="timetable-item">CS</div>
+            <div class="timetable-item lunch">LUNCH</div>
+            <div class="timetable-item">NN</div>
+            <div class="timetable-item">NN</div>
+            <div class="timetable-item">CS</div>
+        </div>
+        
+        <div class="faculty-container mt-4">
+            <div class="timetable-item">SUBJECT</div>
+            <div class="timetable-item">SUBJECT NAME</div>
+            <div class="timetable-item">NAME OF THE FACULTY</div>
+            
+            <div class="timetable-item">NN</div>
+            <div class="timetable-item">NEURAL NETWORKS</div>
+            <div class="timetable-item">MS. PRIYANKA SAXENA</div>
+            
+            <div class="timetable-item">FEWD</div>
+            <div class="timetable-item">FRONT END WEB DEVELOPMENT</div>
+            <div class="timetable-item">DR. M. ANURADHA</div>
+            
+            <div class="timetable-item">CC</div>
+            <div class="timetable-item">CLOUD COMPUTING</div>
+            <div class="timetable-item">DR. VISHAL REDDY</div>
+            
+            <div class="timetable-item">IOT</div>
+            <div class="timetable-item">INTERNET OF THINGS</div>
+            <div class="timetable-item">DR. FAREESA FIRDOUSE</div>
+            
+            <div class="timetable-item">CS</div>
+            <div class="timetable-item">CYBER SECURITY</div>
+            <div class="timetable-item">MS. NAGA SREE SUMA GEDDAM</div>
+            
+            <div class="timetable-item">FEWD LAB</div>
+            <div class="timetable-item">FRONT END WEB DEVELOPMENT LAB</div>
+            <div class="timetable-item">DR. M. ANURADHA / MS. PARIMALA</div>
+            
+            <div class="timetable-item">CC LAB</div>
+            <div class="timetable-item">CLOUD COMPUTING LAB</div>
+            <div class="timetable-item">DR. VISHAL REDDY / MR. SHAILESH</div>
+            
+            <div class="timetable-item" colspan="2">CLASS TEACHER</div>
+            <div class="timetable-item">DR. M. ANURADHA</div>
+        </div>
+    </div>
+</body>
+</html>
