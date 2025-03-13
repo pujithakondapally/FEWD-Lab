@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTrends - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 30px;
+        }
+
+        .featured-product img {
+            width: 100%;
+            height: 200px; /* Ensuring uniform height */
+            object-fit: contain; /* Ensures images maintain aspect ratio */
+        }
+        
+        .featured-product {
+            transition: transform 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .featured-product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        
+        .nav-item {
+            padding: 0 10px;
+        }
+        
+        .testimonial {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .navbar{
+            background-color:#17a2b8;
+            color:white;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="ecommerce.html">TechTrends</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partners.html">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+                    <a href="#" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart me-1"></i> Cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to TechTrends</h1>
+            <p class="lead">Discover the latest and greatest in tech products</p>
+            <a href="products.html" class="btn btn-primary btn-lg mt-3">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Products Section -->
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Featured Products</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card featured-product">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSdRdRFtHsNP3gwDK6XLD8yAMyy_CjyCEHMubj8-YB48k5efBoU_9uNhTnKCRsWyxfCCvzIqoOxQKIdBkkQzQ1ooZ6a2Sl2-W0oujX9ZJiznBF9uZl-DKRZu6wR" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Watch Pro</h5>
+                            <p class="card-text">Advanced fitness tracking with heart rate monitoring and GPS.</p>
+                            <p class="text-primary fw-bold">Rs 20000</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card featured-product">
+                        <img src="https://cdn.thewirecutter.com/wp-content/media/2022/11/wirelessearbuds-2048px-8831.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Earbuds</h5>
+                            <p class="card-text">Noise-cancelling earbuds with crystal clear sound quality.</p>
+                            <p class="text-primary fw-bold">Rs 10000</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card featured-product">
+                        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Home Hub</h5>
+                            <p class="card-text">Control all your smart devices with this central hub.</p>
+                            <p class="text-primary fw-bold">Rs 15000</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#products" class="btn btn-outline-primary">View All Products</a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Why Choose Us</h2>
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="p-3">
+                            <i class="fas fa-shipping-fast fa-3x mb-3 text-primary"></i>
+                            <h4>Fast Shipping</h4>
+                            <p>Free shipping on all orders over $50. Quick delivery to your doorstep.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="p-3">
+                            <i class="fas fa-undo fa-3x mb-3 text-primary"></i>
+                            <h4>Easy Returns</h4>
+                            <p>30-day return policy. No questions asked.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="p-3">
+                            <i class="fas fa-headset fa-3x mb-3 text-primary"></i>
+                            <h4>24/7 Support</h4>
+                            <p>Our team is always available to help with any questions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="container my-5">
+            <h2 class="text-center mb-4">Other Products</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card featured-product">
+                        <img src="https://image.made-in-china.com/202f0j00YTlvqEOaufkr/Uniwa-X200-6-5-Inch-Global-Band-4G-32g-Smart-Phone-Android-10.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Smartphone X</h5>
+                            <p class="card-text">Latest smartphone with cutting-edge technology.</p>
+                            <p class="text-primary fw-bold">Rs 35000</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card featured-product">
+                        <img src="https://images-cdn.ubuy.co.in/63a0e41574188c75e27e0628-2022-newest-hp-notebook-laptop-15-6-fhd.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Laptop Pro</h5>
+                            <p class="card-text">High-performance laptop for professionals.</p>
+                            <p class="text-primary fw-bold">Rs 60000</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card featured-product">
+                        <img src="https://avstore.in/cdn/shop/files/1.AVStore-Denon-AH-C630-W-Front-View-With-Charging-Case-Black.jpg?v=1708340888" class="card-img-top" alt="Product 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Wireless Headphones</h5>
+                            <p class="card-text">Noise-canceling headphones with high-fidelity sound.</p>
+                            <p class="text-primary fw-bold">Rs 1500</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card featured-product">
+                        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Product 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Gaming Console</h5>
+                            <p class="card-text">Next-gen gaming console with immersive graphics.</p>
+                            <p class="text-primary fw-bold">Rs 90000</p>
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>TechTrends</h5>
+                    <p>Your one-stop shop for the latest technology products and accessories.</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="gallery.html" class="text-white">Gallery</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> 123 Tech Street, City, Country</li>
+                        <li><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i> info@techtrends.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 TechTrends. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="mb-3 text-end">
+                            <a href="#" class="text-decoration-none">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="mt-3 text-center">
+                        <p>Don't have an account? <a href="#" class="text-decoration-none">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
